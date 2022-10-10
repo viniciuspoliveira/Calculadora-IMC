@@ -47,7 +47,7 @@
                                             <constraint firstAttribute="height" constant="21" id="Ysz-i4-LAz"/>
                                         </constraints>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.5" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="Pky-qY-oVp">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.5" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="Pky-qY-oVp" userLabel="Altura Slider">
                                         <rect key="frame" x="-2" y="592" width="378" height="61"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="F5y-xH-Uzl"/>
@@ -55,6 +55,7 @@
                                         <color key="minimumTrackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <action selector="alturaSliderMudar:" destination="BYZ-38-t0r" eventType="valueChanged" id="oaL-ry-LCf"/>
                                             <action selector="heightSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="geh-Nn-fjc"/>
                                         </connections>
                                     </slider>
@@ -67,7 +68,7 @@
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="100Kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTF-aL-8qu">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="100Kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTF-aL-8qu" userLabel="Peso Label">
                                                 <rect key="frame" x="326.5" y="0.0" width="47.5" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -78,7 +79,7 @@
                                             <constraint firstAttribute="height" constant="21" id="F4j-Y3-pFh"/>
                                         </constraints>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="s2X-C5-Zcz">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="s2X-C5-Zcz" userLabel="Peso Slider">
                                         <rect key="frame" x="-2" y="693" width="378" height="61"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="vO5-nL-V8c"/>
@@ -106,6 +107,7 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="calcularBotao:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V6N-Se-hrg"/>
                                             <action selector="calculetePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OUZ-JC-fTk"/>
                                         </connections>
                                     </button>
@@ -126,8 +128,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="alturaLabel" destination="Xcz-1j-2c9" id="eLA-ne-zIh"/>
+                        <outlet property="alturaSlider" destination="Pky-qY-oVp" id="Zd9-xD-lYJ"/>
                         <outlet property="heightLabel" destination="Xcz-1j-2c9" id="aPp-nN-Bby"/>
                         <outlet property="heightSlider" destination="Pky-qY-oVp" id="n0H-EF-OmT"/>
+                        <outlet property="pesoLabel" destination="LTF-aL-8qu" id="cdG-Ih-7xg"/>
+                        <outlet property="pesoSlider" destination="s2X-C5-Zcz" id="Mzf-xV-p3i"/>
                         <outlet property="weightLabel" destination="LTF-aL-8qu" id="GsE-Up-BjO"/>
                         <outlet property="weightSlider" destination="s2X-C5-Zcz" id="bqv-4b-Owh"/>
                         <segue destination="lkq-xS-Cin" kind="presentation" identifier="goToResult" id="6Xm-CG-Zpd"/>
