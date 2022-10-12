@@ -24,7 +24,7 @@ class ResultViewController: UIViewController {
         
         imcLabel.text = imcValue
         adviceLabel.text = advice
-        view.backgroundColor = color
+        //view.backgroundColor = color - Sem mudança de cor nessa versão
     }
     
     
