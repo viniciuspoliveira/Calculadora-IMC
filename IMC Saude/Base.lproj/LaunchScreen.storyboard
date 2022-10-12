@@ -19,14 +19,24 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_1" translatesAutoresizingMaskIntoConstraints="NO" id="Ltd-4R-vUG">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App para ajudar no contrele da sua SAÚDE!  @Vinicius_dev" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwU-mH-MKX">
+                                <rect key="frame" x="20" y="401.66666666666669" width="350" height="40.666666666666686"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Ltd-4R-vUG" secondAttribute="bottom" id="0Qn-eF-buz"/>
                             <constraint firstItem="Ltd-4R-vUG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="2WO-LB-B0Y"/>
+                            <constraint firstItem="jwU-mH-MKX" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="7Vj-bP-wAT"/>
                             <constraint firstItem="Ltd-4R-vUG" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="DX1-KI-F4k"/>
                             <constraint firstItem="Ltd-4R-vUG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WrE-6m-oQe"/>
+                            <constraint firstItem="jwU-mH-MKX" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nZx-jI-5IH"/>
+                            <constraint firstItem="jwU-mH-MKX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="s8x-zM-vOP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jwU-mH-MKX" secondAttribute="trailing" constant="20" id="z9c-jg-sz4"/>
                         </constraints>
                     </view>
                 </viewController>
